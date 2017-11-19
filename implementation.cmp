@@ -1,0 +1,1 @@
+<c:MultiSelectComponent originalList="{!v.clientConditions}" selectedList="{!v.selectedClientConditions}" />

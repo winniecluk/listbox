@@ -1,0 +1,36 @@
+/*.THIS * {
+    border: 1px solid red;
+}*/
+
+.THIS div.choices {
+    border: 1px solid black;
+    height: 220px;
+    width: 20vw;
+    display: inline-block;
+    margin: 0 20px;
+    vertical-align: middle;
+    overflow: scroll;
+}
+
+.THIS div.choice-selection {
+    padding: 4px;
+}
+.THIS div-choice-selection:hover, .THIS div.choices:hover {
+    cursor: pointer;
+}
+
+.THIS div.choices-buttons {
+    text-align: center;
+    display: inline-block;
+    width: 10vw;
+}
+
+.THIS div.button-div {
+    padding: 4px;
+}
+
+@media (max-width: 700px){
+    .THIS div.choices {
+
+    }
+}

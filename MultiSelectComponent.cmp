@@ -1,0 +1,33 @@
+<aura:component >
+    <aura:attribute name="originalList" type="Object[]" />
+    <aura:attribute name="selectedLeftIdx" type="Integer[]" />
+    <aura:attribute name="selectedRightIdx" type="Integer[]" />
+    <aura:attribute name="selectedList" type="Object[]" />
+
+    <div>
+        <div class="choices display-choices">
+            <aura:iteration items="{!v.originalList}" var="item" indexVar="idx">
+                <div class="choice-selection" data-side="left" data-value="{!item.value}" data-index="{!idx}" data-state="deselected" onclick="{!c.selectItem}">{!item.key}</div>
+            </aura:iteration>
+        </div>
+        <div class="choices-buttons">
+            <div class="button-div">
+                <button onclick="{!c.moveItemsRight}">
+                    <lightning:icon iconName="utility:chevronright" size="xx-small" />
+                </button>
+            </div>
+
+            <div class="button-div">
+                <button onclick="{!c.moveItemsLeft}">
+                    <lightning:icon iconName="utility:chevronleft" size="xx-small" />
+                </button>
+            </div>
+        </div>
+        <div class="choices select-choices">
+            <aura:iteration items="{!v.selectedList}" var="item" indexVar="idx">
+                <div class="choice-selection" data-side="right" data-value="{!item.value}" data-index="{!idx}" data-state="deselected" onclick="{!c.selectItem}">{!item.key}</div>
+            </aura:iteration>
+        </div>
+    </div>
+
+</aura:component>
